@@ -1,0 +1,10 @@
+.btn-hover:hover{
+    background-color: transparent;
+}
+
+.banner-img{
+    transition: 3s linear;
+}
+.banner-img:hover{
+    transform: scale(1.15);
+}
