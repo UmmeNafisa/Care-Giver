@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, GithubAuthProvider, createUserWithEmailAndPassword } from "firebase/auth";
 import { useEffect } from "react";
 import { useState } from "react";
 import initializeAuthentication from '../Pages/Login/Firebase/firebaseInitialize'
@@ -6,7 +6,7 @@ import initializeAuthentication from '../Pages/Login/Firebase/firebaseInitialize
 initializeAuthentication();
 
 const useFirebase = () => {
-    const [users, setUsers] = useState()
+    const [user, setUser] = useState()
     const [isLoading, setIsLoading] = useState(true)
     const auth = getAuth();
     const signInUsingGoogle = () => {
@@ -14,7 +14,7 @@ const useFirebase = () => {
         const googleProvider = new GoogleAuthProvider();
         signInWithPopup(auth, googleProvider)
             .then(result => {
-                setUsers(result.user)
+                setUser(result.user)
             })
             .finally(() => setIsLoading(false))
     }
@@ -23,10 +23,10 @@ const useFirebase = () => {
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, user => {
             if (user) {
-                setUsers(user)
+                setUser(user)
             }
             else {
-                setUsers({})
+                setUser({})
             }
             setIsLoading(false);
         })
@@ -38,12 +38,49 @@ const useFirebase = () => {
             .then(() => { })
             .finally(() => setIsLoading(false))
     }
+
+    //manual login part
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('')
+    const handleEmail = e => {
+        setEmail(e.target.value)
+    }
+    const handlePassword = e => {
+        setPassword(e.target.value)
+    }
+    const handleSubmitBtn = e => {
+        e.preventDefault();
+        // console.log(email, password)
+        if (password.length < 6) {
+            setError("password must be more than 6 character long")
+            return;
+        }
+        if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
+            setError("password must contain two uppercase letters")
+            return;
+        }
+        createUserWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                const user = result.user;
+                setError('');
+                console.log(user);
+            }).catch(error => {
+                setError(error.message)
+            })
+
+    }
     return {
-        users,
+        user,
         isLoading,
         signInUsingGoogle,
         logOut,
+        handleEmail,
+        handlePassword,
+        handleSubmitBtn,
+        error
     }
+
 }
 
 export default useFirebase;

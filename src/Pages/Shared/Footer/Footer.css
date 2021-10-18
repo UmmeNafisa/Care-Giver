@@ -1,0 +1,20 @@
+.footer-bg{
+    background-color: #263642;
+}
+.icons p{
+    padding: 0 10px;
+    font-size: 28px;
+    color: lightgray;
+    }
+.icons p:hover{
+        color: rgb(255, 255, 255);
+        transform: scale(1.5);
+    }
+    
+.address h5{
+    color:rgba(62, 70, 78, 0.842);
+    }
+.info h5:hover{
+        color: gainsboro;
+        cursor: pointer;
+    }

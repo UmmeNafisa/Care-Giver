@@ -1,0 +1,20 @@
+.login-bg{
+    background-image: url("https://media.istockphoto.com/vectors/blurred-gradient-background-abstract-design-template-for-brochures-vector-id1169475234?k=20&m=1169475234&s=612x612&w=0&h=alE-qZDLkeQKBcri71SqKLo593syXnU4rIAzSd7r798=");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.user-icon{
+    font-size: 100px;
+    color: darkblue;
+
+}
+
+.icon-bg{
+background-color: rgb(253, 251, 251);
+}
+.right-side-image img{
+    width: 100;
+    max-width: 800px;
+    margin-top: 50px;
+}

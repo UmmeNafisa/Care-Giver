@@ -8,7 +8,7 @@ const Service = (prop) => {
         <Col className="h-100">
             <Card className="bg-dark text-white border-0">
                 <Card.Img className="card-images" src={imgUrl} alt="Card image" />
-                <Card.ImgOverlay className="mb-0">
+                <Card.ImgOverlay className="flex-end">
                     <Card.Title className="fw-bold fs-3">{serviceName}</Card.Title>
                     <Card.Text className="description">
                         {description}
