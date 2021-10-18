@@ -13,6 +13,7 @@ import Footer from './Pages/Shared/Footer/Footer';
 import Booking from './Pages/Booking/Booking';
 import AuthProvider from './Context/AuthProvider';
 import FeedbackDetails from './Pages/FeedbackDetails/FeedbackDetails';
+import CareGivers from './Pages/Home/careGivers/CareGivers';
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path="/register">
             <Registration></Registration>
+          </Route>
+          <Route path="/careGiver">
+            <CareGivers></CareGivers>
           </Route>
           <Route path="/feedbackDetails">
             <FeedbackDetails></FeedbackDetails>
