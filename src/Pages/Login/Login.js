@@ -8,6 +8,7 @@ import useAuth from '../../Context/useAuth';
 import { useLocation, useHistory } from 'react-router-dom';
 import loginImg from '../../Images/login.png'
 import './login.css'
+import { Col, Row } from 'react-bootstrap';
 
 
 
@@ -31,8 +32,8 @@ const Login = ({ login }) => {
     }
     return (
         <div className="div d-flex justify-content-center align-items-center login-bg">
-            <div className="row ">
-                <div className="col-md-6">
+            <Row xs={1} md={2} lg={2}>
+                <Col>
                     <div>
                         <div className="form-input mt-5 text-center">
                             <FontAwesomeIcon className="user-icon rounded-circle" icon={faUser} />
@@ -60,7 +61,7 @@ const Login = ({ login }) => {
                             <p> New client to Care Giver? <Link className="text-white" to="/register"> Please Register </Link> </p>
 
                             <div> ------------------ or ------------------ </div>
-                            <div className="my-3">
+                            <div className="my-3 mb-5">
                                 <h5 className="mb-4"> Sign in  Using </h5>
                                 <button className="icon-bg text-danger fs-4 rounded-circle px-2 border-0 me-3"><FontAwesomeIcon icon={faGoogle} onClick={signInUsingGoogle} /></button>
                                 <button className="icon-bg text-primary fs-4 rounded-circle px-2 border-0 me-3 "><FontAwesomeIcon icon={faFacebook} /></button>
@@ -69,8 +70,8 @@ const Login = ({ login }) => {
                         </div>
 
                     </div>
-                </div>
-                <div className="col-md-6">
+                </Col>
+                <Col>
                     <div className="right-side-image">
                         <img
                             className="img-fluid"
@@ -78,9 +79,8 @@ const Login = ({ login }) => {
                             alt="loginImg"
                         />
                     </div>
-                    ;
-                </div>
-            </div>
+                </Col>
+            </Row>
         </div>
     );
 };

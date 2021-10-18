@@ -7,7 +7,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 const Footer = () => {
     return (
-        <div className="footer-bg mt-5 mb-0">
+        <div className="footer-bg m-0 mb-0">
             <Container className="d-md-flex justify-content-around">
                 <Row xs={1} md={2} lg={3} className="g-4">
                     <Col>
