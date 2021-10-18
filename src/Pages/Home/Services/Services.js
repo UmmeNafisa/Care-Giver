@@ -11,7 +11,7 @@ const Services = () => {
             .then(data => setServices(data))
     }, [])
     return (
-        <Container>
+        <Container className="my-5">
             <div className="text-center container mt-5">
                 <h2>Explore Our Top Services</h2>
                 <p className="text-muted">A dependable, compassionate presence you can trust </p>

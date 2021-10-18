@@ -1,0 +1,10 @@
+.feedback-bg{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../Images/feedbackCover.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+}
+.feedback-caption{
+    padding-top: 150px;
+}
