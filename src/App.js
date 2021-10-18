@@ -7,6 +7,7 @@ import {
 import Home from './Pages/Home/Home/Home';
 import Header from './Pages/Shared/Header/Header';
 import Login from './Pages/Login/Login';
+import Registration from './Pages/Login/Registration/Registration';
 import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Pages/Shared/Footer/Footer';
 import Booking from './Pages/Booking/Booking';
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/register">
+            <Registration></Registration>
           </Route>
           <Route path="/booking">
             <Booking></Booking>
