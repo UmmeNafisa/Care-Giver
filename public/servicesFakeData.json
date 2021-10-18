@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "serviceName": "24Hr/7 Days Support",
+        "description": "Do you or a loved one need a little bit of extra help in your home? Chores, errands, and personal tasks can be difficult or unsafe for many individuals to perform on their own.We can provide services for 24 hrs in 7 days.",
+        "imgUrl": "https://727512.smushcdn.com/1870943/wp-content/uploads/2019/06/service-5.jpg?lossy=1&strip=1&webp=1"
+    },
+    {
+        "id": 2,
+        "serviceName": "Medical Care",
+        "description": "We provide all kind of medical supports.Our experts nurses give you proper medication on time.They give medication reminders and monitoring",
+        "imgUrl": "https://727512.smushcdn.com/1870943/wp-content/uploads/2019/06/service-6.jpg?lossy=1&strip=1&webp=1"
+    },
+    {
+        "id": 3,
+        "serviceName": "Personal Care",
+        "description": "With our experienced and caring staff, your loved one can remain in their home and continue living independently for longer. Our customized care plans will match your loved one’s needs exactly, so they can enjoy care services that are uniquely tailored to them. ",
+        "imgUrl": "https://727512.smushcdn.com/1870943/wp-content/uploads/2019/06/service-7.jpg?lossy=1&strip=1&webp=1"
+    },
+    {
+        "id": 4,
+        "serviceName": "Elderly Care Service",
+        "description": "Many seniors prefer to age in their own home, but this can grow more and more difficult as the years pass. Our personal care services are specially designed to provide additional assistance to enhance your loved one’s independence.",
+        "imgUrl": "https://727512.smushcdn.com/1870943/wp-content/uploads/2019/06/service-4.jpg?lossy=1&strip=1&webp=1"
+    },
+    {
+        "id": 5,
+        "serviceName": "Available Care Giver",
+        "description": "Our caregivers are ready to provide quality services to everyone in need of assistance, including elders, those who are living with a disability, and those who are in recovery from an injury or living with a chronic condition.",
+        "imgUrl": "https://727512.smushcdn.com/1870943/wp-content/uploads/2019/06/service-16.jpg?lossy=1&strip=1&webp=1"
+    },
+    {
+        "id": 6,
+        "serviceName": "Assisted Living",
+        "description": "Personal grooming, bathing, toileting, and hygiene tasks. Mobility and transfers, Medication reminders and monitoring, Companionship, Light housekeeping, meal planning, and meal preparation,Shopping and errands",
+        "imgUrl": "https://727512.smushcdn.com/1870943/wp-content/uploads/2019/06/service-15.jpg?lossy=1&strip=1&webp=1"
+    }
+]

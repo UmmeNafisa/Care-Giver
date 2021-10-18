@@ -1,0 +1,15 @@
+.card-images{
+    height: 300px;
+    -webkit-filter: blur(1px) brightness(0.5);
+    -moz-filter: blur(1px) brightness(0.5);
+    -ms-filter: blur(1px) brightness(0.5);
+    -o-filter: blur(1px) brightness(0.5);
+    filter: blur(1px) brightness(0.5);
+}
+/* .card-images:hover{
+    transform: scale(1.15);
+} */
+
+.description{
+    display: none;
+}
