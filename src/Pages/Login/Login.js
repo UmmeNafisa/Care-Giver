@@ -13,7 +13,7 @@ import { Col, Row } from 'react-bootstrap';
 
 
 const Login = ({ login }) => {
-    const { signInUsingGoogle, handleEmail, handlePassword, handleSubmitBtn, handleGithubSignInBtn } = useAuth();
+    const { error, signInUsingGoogle, handleEmail, handlePassword, handleSubmitBtn, handleGithubSignInBtn } = useAuth();
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const onSubmit = async data => {
         await login(data.email, data.password);
@@ -47,7 +47,7 @@ const Login = ({ login }) => {
                             <h3 className="text-white my-3"> Client Login </h3>
                             <input
                                 onChange={handleEmail}
-                                className="mt-2 p-2 form-control border-0 border-bottom rounded-pill w-75 mx-auto"
+                                className="mt-2 p-2 form-control border-0 border-bottom rounded-pill w-50 mx-auto"
                                 type="email"
                                 placeholder="Email ID"
                                 required
@@ -55,11 +55,12 @@ const Login = ({ login }) => {
                             <br />
                             <input
                                 onChange={handlePassword}
-                                className="mt-2 p-2 form-control border-0 border-bottom rounded-pill w-75 mx-auto"
+                                className="mt-2 p-2 form-control border-0 border-bottom rounded-pill w-50 mx-auto"
                                 type="password"
                                 placeholder="Password"
                                 required
                             />
+                            <p className="text-danger">{error} </p>
                             <br />
                             <div class="d-grid gap-2 col-6 mx-auto">
                                 <input onClick={handleSubmitBtn} className="btn btn-primary fs-5 my-3 rounded-pill px-5" type="submit" value="Login" />

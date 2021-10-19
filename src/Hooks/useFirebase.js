@@ -64,17 +64,27 @@ const useFirebase = () => {
     const handlePassword = e => {
         setPassword(e.target.value)
     }
+
     const handleSubmitBtn = e => {
         e.preventDefault();
         // console.log(email, password)
-        if (password.length < 6) {
-            setError("password must be more than 6 character long")
+        if (user.email === email) {
+            setError("invalid email")
+            return
+        }
+        if (password.length < 10) {
+            setError("Password must be more than 6 character long")
             return;
         }
         if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
-            setError("password must contain two uppercase letters")
+            setError("Password must contain two uppercase letters")
             return;
         }
+        if ((/[0-9]/) < 0) {
+            setError("Your password must contain at least one digit.")
+            return;
+        }
+
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
@@ -83,7 +93,6 @@ const useFirebase = () => {
             }).catch(error => {
                 setError(error.message)
             })
-
     }
     return {
         user,
