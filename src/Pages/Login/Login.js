@@ -47,7 +47,7 @@ const Login = ({ login }) => {
                             <h3 className="text-white my-3"> Client Login </h3>
                             <input
                                 onChange={handleEmail}
-                                className="mt-2 p-2 form-control border-0 border-bottom rounded-pill"
+                                className="mt-2 p-2 form-control border-0 border-bottom rounded-pill w-75 mx-auto"
                                 type="email"
                                 placeholder="Email ID"
                                 required
@@ -55,7 +55,7 @@ const Login = ({ login }) => {
                             <br />
                             <input
                                 onChange={handlePassword}
-                                className="mt-2 p-2 form-control border-0 border-bottom rounded-pill"
+                                className="mt-2 p-2 form-control border-0 border-bottom rounded-pill w-75 mx-auto"
                                 type="password"
                                 placeholder="Password"
                                 required

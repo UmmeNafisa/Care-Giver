@@ -8,12 +8,12 @@ const FeedbackDetails = () => {
         console.log(newRating);
     };
     return (
-        <div className="d-lg-flex justify-content-evenly align-items-center">
+        <div className="d-lg-flex justify-content-center align-items-center">
             <div>
-                <img src={feedbackImg} alt="" />
+                <img className="img-fluid w-75" src={feedbackImg} alt="" />
             </div>
             <div>
-                <h2 className="bg-info text-white fw-bold px-5 py-2"> Leave your Feedback </h2>
+                <h2 className="bg-info text-white fw-bold px-3 py-1 mt-3"> Leave your Feedback </h2>
                 <h6 className="text-center mb-5"> Your feedback inspires us </h6>
                 <Form>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -33,7 +33,7 @@ const FeedbackDetails = () => {
                     activeColor="#ffd700"
                 />
                 <div class="d-grid gap-2 col-6 mx-auto">
-                    <input className="btn btn-info text-white fs-5 my-3 rounded-pill px-5 w-100 mt-5" type="submit" value="Submit" />
+                    <input className="btn btn-info text-white fs-5 mt-3 mb-5 rounded-pill px-5 w-100 mt-5" type="submit" value="Submit" />
                 </div>
             </div>
         </div>
