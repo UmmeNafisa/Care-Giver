@@ -34,7 +34,7 @@ const Header = () => {
                         {user?.email || user?.name ?
                             <Button onClick={logOut} varient="light" className="btn btn-info text-white fw-bold"> LOGOUT</Button> : <Nav.Link as={Link} to="/login"><Button varient="light" className="btn btn-info text-white fw-bold"> LOGIN </Button> </Nav.Link>
                         }
-                        {(user.email || user.name) && <div>
+                        {(user?.email || user?.name) && <div>
                             <Navbar.Text>
                                 <Link to="/profile" className="text-decoration-none fw-bold px-2">{user?.displayName}</Link>
                                 <img className="user-img" src={user?.photoURL} alt="" />
