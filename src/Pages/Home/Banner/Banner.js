@@ -17,7 +17,7 @@ const Banner = () => {
                 <Carousel.Caption>
                     <Container fluid>
                         <Row>
-                            <Col className="text-start" lg={8}>
+                            <Col className="text-start mb-5" lg={8}>
                                 <h1>You can't always be there.</h1>
                                 <h1>But we can.</h1>
                                 <p className=""> CareGivers offers an individualized approach to keep seniors safe and sound at home, instead of anywhere else</p>
@@ -37,7 +37,7 @@ const Banner = () => {
                 <Carousel.Caption>
                     <Container fluid>
                         <Row>
-                            <Col className="text-start" lg={8}>
+                            <Col className="text-start mb-5" lg={8}>
                                 <h1>We give seniors the love they deserve. </h1>
                                 <p className=""> CareGivers offers an individualized approach to keep seniors safe and sound at home, instead of anywhere else</p>
                                 <button className="btn btn-info text-white btn-hover">OUR CARE SERVICES </button>
@@ -56,7 +56,7 @@ const Banner = () => {
                 <Carousel.Caption>
                     <Container fluid>
                         <Row>
-                            <Col className="text-start float-start" lg={8}>
+                            <Col className="text-start mb-5" lg={8}>
                                 <h1>Let's enrich the lives of seniors with kindness and joy!</h1>
                                 <p className=""> CareGivers offers an individualized approach to keep seniors safe and sound at home, instead of anywhere else</p>
                                 <button className="btn btn-info text-white btn-hover">OUR CARE SERVICES </button>
