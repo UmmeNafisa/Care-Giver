@@ -15,6 +15,8 @@ import AuthProvider from './Context/AuthProvider';
 import FeedbackDetails from './Pages/FeedbackDetails/FeedbackDetails';
 import CareGivers from './Pages/Home/careGivers/CareGivers';
 import Services from './Pages/Home/Services/Services';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute'
+import Appoinment from './Pages/Appoinment/Appoinment';
 
 function App() {
   return (
@@ -43,9 +45,12 @@ function App() {
           <Route path="/feedbackDetails">
             <FeedbackDetails></FeedbackDetails>
           </Route>
-          <Route path="/booking">
-            <Booking></Booking>
+          <Route path="/appoinment">
+            <Appoinment></Appoinment>
           </Route>
+          <PrivateRoute path="/booking/:serviceId">
+            <Booking></Booking>
+          </PrivateRoute>
           <Route path="*">
             <NotFound />
           </Route>

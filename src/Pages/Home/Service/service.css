@@ -6,10 +6,9 @@
     -o-filter: blur(1px) brightness(0.5);
     filter: blur(1px) brightness(0.5);
 }
-/* .card-images:hover{
-    transform: scale(1.15);
-} */
-
-.description{
-    display: none;
+.card{
+    transition: 1s linear;
+}
+.card:hover{
+    transform: scale(1.05);
 }

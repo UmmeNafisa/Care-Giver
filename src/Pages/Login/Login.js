@@ -13,7 +13,7 @@ import { Col, Row } from 'react-bootstrap';
 
 
 const Login = ({ login }) => {
-    const { error, users, isLoading, signInUsingGoogle, handleEmail, handlePassword,
+    const { error, user, isLoading, signInUsingGoogle, handleEmail, handlePassword,
         handleSubmitBtn } = useAuth();
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const onSubmit = async data => {

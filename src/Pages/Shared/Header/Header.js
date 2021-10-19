@@ -29,7 +29,7 @@ const Header = () => {
                         <Nav.Link as={Link} to="/home">ABOUT</Nav.Link>
                         <Nav.Link as={HashLink} to="/home#careGiver">CARE-GIVERS</Nav.Link>
                         <Nav.Link as={Link} to="/feedbackDetails"> FEEDBACK </Nav.Link>
-                        <Nav.Link as={Link} to="/booking"> APPOINMENT </Nav.Link>
+                        <Nav.Link as={Link} to="/appoinment"> APPOINMENT </Nav.Link>
 
                         {user?.email ?
                             <div> <Button onClick={logOut} varient="light" className="btn btn-info text-white fw-bold"> LOGOUT</Button> <Navbar.Text>

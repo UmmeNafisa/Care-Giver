@@ -11,14 +11,14 @@ const Footer = () => {
             <Container className="d-md-flex justify-content-around">
                 <Row xs={1} md={2} lg={3} className="g-4">
                     <Col>
-                        <div className="care-givers-part">
+                        <div className="care-givers-part px-3">
                             <h3 className="text-white my-5"> Care Givers </h3>
                             <h5 className="text-color">Heath Mart</h5>
                             <p className="text-color">The place we call home is the place that feels most comfortable and secure. A sense of home can become especially important as we age. Our in-home senior care services help ease the challenges of aging while encouraging seniors to enjoy the comforts of home.</p>
                         </div>
                     </Col>
                     <Col>
-                        <div className="text-white info ms-5">
+                        <div className="text-white info px-3">
                             <h3 className=" text-white my-5">Contact us</h3>
                             <p className="text-color mt-3"> 13323 California St.</p>
                             <p className="text-color">Omaha, NE, 18813</p>
@@ -27,8 +27,8 @@ const Footer = () => {
                         </div>
                     </Col>
                     <Col>
-                        <h3 className=" text-white my-5"> Follow us</h3>
-                        <div className=" d-flex justify-content-start pe-4 icons">
+                        <h3 className=" text-white my-5 px-3"> Follow us</h3>
+                        <div className=" d-flex justify-content-start pe-4 icons px-3">
                             <p><FontAwesomeIcon icon={faFacebook} /></p>
                             <p><FontAwesomeIcon icon={faYoutube} /></p>
                             <p><FontAwesomeIcon icon={faTwitter} /></p>

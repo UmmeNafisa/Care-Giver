@@ -5,14 +5,14 @@ import useAuth from '../../../Context/useAuth';
 
 
 const PrivateRoute = ({ children, ...rest }) => {
-    const { users, isLoading } = useAuth();
+    const { user, isLoading } = useAuth();
     if (isLoading) {
         return <Spinner animation="border" variant="danger" />
     }
     return (
         <Route
             {...rest}
-            render={({ location }) => users.email ? children : <Redirect
+            render={({ location }) => user.email ? children : <Redirect
                 to={{
                     pathname: "/login",
                     state: { from: location }
