@@ -14,6 +14,7 @@ import Booking from './Pages/Booking/Booking';
 import AuthProvider from './Context/AuthProvider';
 import FeedbackDetails from './Pages/FeedbackDetails/FeedbackDetails';
 import CareGivers from './Pages/Home/careGivers/CareGivers';
+import Services from './Pages/Home/Services/Services';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route path="/home">
             <Home />
+          </Route>
+          <Route path="/services">
+            <Services></Services>
           </Route>
           <Route path="/login">
             <Login />
