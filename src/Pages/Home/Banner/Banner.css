@@ -4,6 +4,9 @@
 
 .banner-img{
     transition: 3s linear;
+    height: 100vh;
+    max-height: 500px;
+    
 }
 .banner-img:hover{
     transform: scale(1.15);

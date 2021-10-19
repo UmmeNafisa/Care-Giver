@@ -19,12 +19,12 @@ const Header = () => {
                             width="120"
                             height="60"
                             className="d-inline-block align-top"
-                            alt="React Bootstrap logo"
+                            alt="Care Giver logo"
                         />
                     </Navbar.Brand >
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
-                        <Nav.Link as={HashLink} to="/home#home">HOME</Nav.Link>
+                    <Navbar.Collapse className="justify-content-end nav-link" id="responsive-navbar-nav">
+                        <Nav.Link as={HashLink} to="/home#home" >HOME</Nav.Link>
                         <Nav.Link as={HashLink} to="/home#services">SERVICES</Nav.Link>
                         <Nav.Link as={Link} to="/home">ABOUT</Nav.Link>
                         <Nav.Link as={HashLink} to="/home#careGiver">CARE-GIVERS</Nav.Link>
