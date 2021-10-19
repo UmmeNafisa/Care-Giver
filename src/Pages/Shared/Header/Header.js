@@ -31,11 +31,16 @@ const Header = () => {
                         <Nav.Link as={Link} to="/feedbackDetails"> FEEDBACK </Nav.Link>
                         <Nav.Link as={Link} to="/appoinment"> APPOINMENT </Nav.Link>
 
-                        {user?.email ?
-                            <div> <Button onClick={logOut} varient="light" className="btn btn-info text-white fw-bold"> LOGOUT</Button> <Navbar.Text>
+                        {user?.email || user?.name ?
+                            <Button onClick={logOut} varient="light" className="btn btn-info text-white fw-bold"> LOGOUT</Button> : <Nav.Link as={Link} to="/login"><Button varient="light" className="btn btn-info text-white fw-bold"> LOGIN </Button> </Nav.Link>
+                        }
+                        {(user.email || user.name) && <div>
+                            <Navbar.Text>
                                 <Link to="/profile" className="text-decoration-none fw-bold px-2">{user?.displayName}</Link>
                                 <img className="user-img" src={user?.photoURL} alt="" />
-                            </Navbar.Text> </div> : <Nav.Link as={Link} to="/login"><Button varient="light" className="btn btn-info text-white fw-bold"> LOGIN </Button> </Nav.Link>}
+                            </Navbar.Text>
+                        </div>
+                        }
 
                     </Navbar.Collapse>
                 </Container>

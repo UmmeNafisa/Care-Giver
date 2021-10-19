@@ -13,23 +13,30 @@ import { Col, Row } from 'react-bootstrap';
 
 
 const Login = ({ login }) => {
-    const { error, user, isLoading, signInUsingGoogle, handleEmail, handlePassword,
-        handleSubmitBtn } = useAuth();
+    const { signInUsingGoogle, handleEmail, handlePassword, handleSubmitBtn, handleGithubSignInBtn } = useAuth();
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const onSubmit = async data => {
         await login(data.email, data.password);
         reset();
     };
-    const history = useHistory();
     const location = useLocation();
-    const redirect_url = location.state?.from || '/home'
-    console.log("came from", location.state?.from);
+    const history = useHistory();
+    const redirect_uri = location.state?.from || '/home';
+
 
     const handleGoogleLogin = () => {
-        signInUsingGoogle().then(result => {
-            history.push(redirect_url);
+        signInUsingGoogle()
+            .then(result => {
+                history.push(redirect_uri);
+            })
+    }
+
+    const handleGithubLogin = () => {
+        handleGithubSignInBtn().then(result => {
+            history.push(redirect_uri);
         })
     }
+
     return (
         <div className="div d-flex justify-content-center align-items-center login-bg">
             <Row xs={1} md={2} lg={2}>
@@ -63,9 +70,9 @@ const Login = ({ login }) => {
                             <div> ------------------ or ------------------ </div>
                             <div className="my-3 mb-5">
                                 <h5 className="mb-4"> Sign in  Using </h5>
-                                <button className="icon-bg text-danger fs-4 rounded-circle px-2 border-0 me-3"><FontAwesomeIcon icon={faGoogle} onClick={signInUsingGoogle} /></button>
+                                <button className="icon-bg text-danger fs-4 rounded-circle px-2 border-0 me-3"><FontAwesomeIcon icon={faGoogle} onClick={handleGoogleLogin} /></button>
                                 <button className="icon-bg text-primary fs-4 rounded-circle px-2 border-0 me-3 "><FontAwesomeIcon icon={faFacebook} /></button>
-                                <button className="icon-bg text-dark fs-4 rounded-circle px-2 border-0 "><FontAwesomeIcon icon={faGithub} /></button>
+                                <button className="icon-bg text-dark fs-4 rounded-circle px-2 border-0 "><FontAwesomeIcon icon={faGithub} onClick={handleGithubLogin} /></button>
                             </div>
                         </div>
 

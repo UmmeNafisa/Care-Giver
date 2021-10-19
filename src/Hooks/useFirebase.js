@@ -9,27 +9,30 @@ const useFirebase = () => {
     const [user, setUser] = useState()
     const [isLoading, setIsLoading] = useState(true)
     const auth = getAuth();
+    // google sign in 
     const signInUsingGoogle = () => {
         setIsLoading(true)
         const googleProvider = new GoogleAuthProvider();
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                const credential = GoogleAuthProvider.credentialFromResult(result);
-                const token = credential.accessToken;
-                setUser(result.user)
-
-            }).catch((error) => {
+        return signInWithPopup(auth, googleProvider)
+            .catch((error) => {
                 // Handle Errors here.
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                // The email of the user's account used.
-                const email = error.email;
-                // The AuthCredential type that was used.
-                const credential = GoogleAuthProvider.credentialFromError(error);
-                // ...
+                setError(error.message);
             })
             .finally(() => setIsLoading(false))
     }
+
+    // github sign in 
+    const handleGithubSignInBtn = () => {
+        setIsLoading(true)
+        const githubProvider = new GithubAuthProvider();
+        return signInWithPopup(auth, githubProvider)
+            .catch((error) => {
+                // Handle Errors here.
+                setError(error.message);
+            })
+            .finally(() => setIsLoading(false))
+    }
+
     //for onAuthStateChange 
 
     useEffect(() => {
@@ -90,7 +93,8 @@ const useFirebase = () => {
         handleEmail,
         handlePassword,
         handleSubmitBtn,
-        error
+        error,
+        handleGithubSignInBtn
     }
 
 }
