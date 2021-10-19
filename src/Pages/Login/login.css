@@ -1,3 +1,6 @@
+.body{
+    overflow-x: hidden;
+}
 .login-bg{
     background-image: url('../../Images/login-bg.jpg');
     background-repeat: no-repeat;
@@ -14,7 +17,8 @@
 background-color: rgb(253, 251, 251);
 }
 .right-side-image img{
-    width: 100;
+    width: 100%;
     max-width: 800px;
     margin-top: 50px;
+    
 }

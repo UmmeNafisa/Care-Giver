@@ -4,11 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Col, FloatingLabel, Form, InputGroup, Row, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useAuth from '../../../Context/useAuth';
-import loginImg from '../../../Images/login.png';
+
 
 const Registration = () => {
-    const { signInUsingGoogle } = useAuth();
+
     const [validated, setValidated] = useState(false);
 
     const handleSubmit = (event) => {
@@ -103,7 +102,7 @@ const Registration = () => {
                     />
                 </Form.Group>
                 <Button className="btn btn-primary fs-5 my-3 rounded-pill px-5 w-100  text-center" type="submit">Submit form</Button>
-                <p className="mb-5 text-white text-center"> Already you are our client?  <Link className="text-white fw-bold" to="/login"> Please Login </Link> </p>
+                <p className="mb-5 text-white text-center"> Already you are our client?  <Link to="/login"> <Button className="text-white btn btn-primary rounded-pill px-3"> Login </Button > </Link> </p>
             </Form >
         </div >
     );
