@@ -1,4 +1,3 @@
-import { faFacebook, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
@@ -7,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 const Registration = () => {
-
+    const [islogin, handleUserChange, handleEmail, handlePassword] = useState([])
     const [validated, setValidated] = useState(false);
 
     const handleSubmit = (event) => {
@@ -32,7 +31,7 @@ const Registration = () => {
                         <Form.Control
                             required
                             type="text"
-                            placeholder="First name"
+                            placeholder="First name" onBlur={handleUserChange}
                         />
                         <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                     </Form.Group>
@@ -87,12 +86,15 @@ const Registration = () => {
                 <FloatingLabel controlId="floatingNumber" label="Phone Number" className="mb-3">
                     <Form.Control type="PhoneNumber" placeholder="+0**-******" />
                 </FloatingLabel>
-                <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3">
-                    <Form.Control type="email" placeholder="name@example.com" />
-                </FloatingLabel>
-                <FloatingLabel controlId="floatingPassword" label="Password">
-                    <Form.Control type="password" placeholder="Password" />
-                </FloatingLabel>
+                {islogin && <div>
+                    <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3">
+                        <Form.Control type="email" placeholder="name@example.com" onBlur={handleEmail} />
+                    </FloatingLabel>
+                    <FloatingLabel controlId="floatingPassword" label="Password">
+                        <Form.Control type="password" placeholder="Password" onBlur={handlePassword} />
+                    </FloatingLabel>
+                </div>
+                }
                 <Form.Group className="my-3 text-white">
                     <Form.Check
                         required

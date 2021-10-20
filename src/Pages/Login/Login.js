@@ -14,33 +14,23 @@ import Button from '@restart/ui/esm/Button';
 
 
 const Login = () => {
-    const { error, signInUsingGoogle, handleEmail, handlePassword, handleSubmitBtn, handleGithubSignInBtn } = useAuth();
-    const [validated, setValidated] = useState(false);
+    const { error, signInUsingGoogle, handleEmail, islogin, handlePassword, handleSubmitBtn, handleGithubSignInBtn } = useAuth();
 
-    const handleSubmit = (event) => {
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
-
-        setValidated(true);
-    };
     const location = useLocation();
     const history = useHistory();
-    const redirect_uri = location.state?.from || '/home';
+    const redirect_url = location.state?.from || '/home';
 
 
     const handleGoogleLogin = () => {
         signInUsingGoogle()
             .then(result => {
-                history.push(redirect_uri);
+                history.push(redirect_url);
             })
     }
 
     const handleGithubLogin = () => {
         handleGithubSignInBtn().then(result => {
-            history.push(redirect_uri);
+            history.push(redirect_url);
         })
     }
 
@@ -53,16 +43,18 @@ const Login = () => {
                             <div className="form-input mt-5 text-center">
                                 <FontAwesomeIcon className="user-icon rounded-circle" icon={faUser} />
                                 <h3 className="text-white my-3"> Client Login </h3>
-                                <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                                    <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3" onChange={handleEmail}>
-                                        <Form.Control type="email" placeholder="name@example.com" />
+                                {!islogin &&
+                                    <Form onSubmit={handleSubmitBtn}>
+                                        <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3" onChange={handleEmail}>
+                                            <Form.Control type="email" placeholder="name@example.com" />
 
-                                    </FloatingLabel>
-                                    <FloatingLabel controlId="floatingPassword" label="Password" onChange={handlePassword}>
-                                        <Form.Control type="password" placeholder="Password" />
-                                    </FloatingLabel>
-                                    <p className="text-danger">{error} </p>
-                                </Form>
+                                        </FloatingLabel>
+                                        <FloatingLabel controlId="floatingPassword" label="Password" onChange={handlePassword}>
+                                            <Form.Control type="password" placeholder="Password" />
+                                        </FloatingLabel>
+                                        <p className="text-danger">{error} </p>
+                                    </Form>
+                                }
                                 <br />
                                 <div class="d-grid gap-2 col-6 mx-auto">
                                     <input onClick={handleSubmitBtn} className="btn btn-primary fs-5 my-3 rounded-pill px-5" type="submit" value="Login" />
