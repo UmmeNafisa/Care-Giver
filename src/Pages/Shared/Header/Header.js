@@ -25,11 +25,11 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse className="justify-content-end nav-link" id="responsive-navbar-nav">
                         <Nav.Link as={HashLink} to="/home#home" >HOME</Nav.Link>
-                        <Nav.Link as={Link} to="/services">SERVICES</Nav.Link>
-                        <Nav.Link as={Link} to="/home">ABOUT</Nav.Link>
-                        <Nav.Link as={Link} to="careGiver">CARE-GIVERS</Nav.Link>
-                        <Nav.Link as={Link} to="/feedbackDetails"> FEEDBACK </Nav.Link>
-                        <Nav.Link as={Link} to="/appoinment"> APPOINMENT </Nav.Link>
+                        <Nav.Link as={HashLink} to="/home#services">SERVICES</Nav.Link>
+                        <Nav.Link as={HashLink} to="/home">ABOUT</Nav.Link>
+                        <Nav.Link as={HashLink} to="careGiver">CARE-GIVERS</Nav.Link>
+                        <Nav.Link as={HashLink} to="/feedbackDetails"> FEEDBACK </Nav.Link>
+                        <Nav.Link as={HashLink} to="/appoinment"> APPOINMENT </Nav.Link>
 
                         {user?.email || user?.name ?
                             <Button onClick={logOut} varient="light" className="btn btn-info text-white fw-bold"> LOGOUT</Button> : <Nav.Link as={Link} to="/login"><Button varient="light" className="btn btn-info text-white fw-bold"> LOGIN </Button> </Nav.Link>

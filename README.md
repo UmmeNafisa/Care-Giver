@@ -4,18 +4,17 @@ website live link : https://care-giver-d862c.web.app
 
 ## About Care Givers
 
-Our team of registered nurses and skilled healthcare professionals provide in-home nursing to help manage and coordinate recovery at home.
+Its a login based authentication website
 
-### Explore Our Top Services 
+### Functionality: 
 
--24Hr/7 Days Support: We can provide services for 24 hrs in 7 days.
+-Users can register, log in through the form with validation
 
--Medical Care:Our experts nurses give you proper medication on time.They give medication reminders and monitoring.
+-Users can also log in through Google or Github or Facebook account
 
--Personal Care : With our experienced and caring staff, your loved one can remain in their home and continue living independently for longer
+-Using API
 
--Elderly Care Service : Our personal care services are specially designed to provide additional assistance to enhance your loved one’s independence
-
--Available Care Giver: Our caregivers are ready to provide quality services to everyone in need of assistance, including elders, those who are living with a disability, and those who are in recovery from an injury or living with a chronic condition.
-
--Assisted Living : Personal grooming, bathing, toileting, and hygiene tasks.
+#### Technology Used:
+- React,React-router-5, react bootstrap,React-hook form
+- Firebase
+- font-awesome
